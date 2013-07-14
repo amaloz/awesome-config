@@ -234,7 +234,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "p", function() menubar.show() end),
     -- Lock
     awful.key({ modkey, "Shift" }, "l",
-              function() awful.util.spawn("xscreensaver-command -lock") end)
+              function() awful.util.spawn("slock") end)
 )
 
 clientkeys = awful.util.table.join(
