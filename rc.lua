@@ -44,7 +44,7 @@ local layouts = {
    -- awful.layout.suit.fair.horizontal,
 }
 
-naughty.config.defaults.timeout = 5
+naughty.config.defaults.timeout = 2
 naughty.config.defaults.screen = 1
 naughty.config.defaults.position = "top_right"
 naughty.config.defaults.margin = 8
@@ -149,6 +149,9 @@ for s = 1, screen.count() do
    -- Widgets that are aligned to the right
    local right_layout = wibox.layout.fixed.horizontal()
    if s == 1 then right_layout:add(wibox.widget.systray()) end
+   right_layout:add(pacicon)
+   right_layout:add(pacwidget)
+   right_layout:add(space)
    right_layout:add(wifiicon)
    right_layout:add(wifipct)
    right_layout:add(baticon)
@@ -156,6 +159,8 @@ for s = 1, screen.count() do
    right_layout:add(space)
    right_layout:add(volicon)
    right_layout:add(volpct)
+   right_layout:add(space)
+   right_layout:add(weather)
    right_layout:add(space)
    right_layout:add(mytextclock)
    right_layout:add(space)
