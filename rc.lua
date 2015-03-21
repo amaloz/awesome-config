@@ -149,9 +149,9 @@ for s = 1, screen.count() do
    -- Widgets that are aligned to the right
    local right_layout = wibox.layout.fixed.horizontal()
    if s == 1 then right_layout:add(wibox.widget.systray()) end
-   right_layout:add(pacicon)
-   right_layout:add(pacwidget)
-   right_layout:add(space)
+   -- right_layout:add(pacicon)
+   -- right_layout:add(pacwidget)
+   -- right_layout:add(space)
    right_layout:add(wifiicon)
    right_layout:add(wifipct)
    right_layout:add(baticon)
